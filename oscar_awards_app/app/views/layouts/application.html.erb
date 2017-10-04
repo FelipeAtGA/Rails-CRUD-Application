@@ -9,6 +9,20 @@
   </head>
 
   <body>
-    <%= yield %>
+  <header>
+    <ul>
+      <li><%= link_to "See all categories" %></li>
+      <li><%= link_to "See all actors" %></li>
+      <li>And another menu item</li>
+    </ul>
+  </header>
+  <%= yield %>
+  <footer>
+    <ul>
+      <li>About us</li>
+      <li>Team</li>
+      <li>Terms and conditions</li>
+    </ul>
+  </footer>
   </body>
 </html>
