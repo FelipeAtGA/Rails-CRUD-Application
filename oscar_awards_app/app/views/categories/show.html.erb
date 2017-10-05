@@ -1,0 +1,17 @@
+<main>
+<h1>Nominatios</h1>
+
+<div>
+  <ul id="">
+    <% @nominations.each do |nomination| %>
+      <li>
+        <span><%= nomination.name %></span>
+        &nbsp;as:&nbsp;
+        <span><%= nomination.character %></span>
+        &nbsp;in:&nbsp;
+        <span><%= nomination.movie %></span>
+      </li>
+    <% end %>
+  </ul>
+</div>
+</main>
