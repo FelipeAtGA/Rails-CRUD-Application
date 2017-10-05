@@ -1,1 +1,10 @@
-index.html.erb
+<main>
+  <h1>All Actors page</h1>
+  <div>
+    <ul id="">
+      <% @actors.each do |actor| %>
+        <li><%= actor.name %></li>
+      <% end %>
+    </ul>
+  </div>
+</main>
