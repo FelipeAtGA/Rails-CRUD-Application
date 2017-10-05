@@ -1,7 +1,18 @@
 <main>
   <div>
-    <% @categories.each do |category| %>
-    <li><%= link_to category.name, category_path(category) %></li>
-    <% end %>
+    <h1 class="center">List of all categories</h1>
+    <ul class="noListStyle ulCat">
+      <% @categories.each do |category| %>
+      <li class="cat">
+        <%= link_to category.name, category_path(category) %>
+        <button>
+          <%= link_to "Delete", category_path(category), method: :delete, data: { confirm: "Are you sure?"} %>
+        </button>
+        <button>
+          <%= link_to "Edit", edit_category_path(category) %>
+        </button>
+      </li>
+      <% end %>
+    </ul>
   </div>
 </main>

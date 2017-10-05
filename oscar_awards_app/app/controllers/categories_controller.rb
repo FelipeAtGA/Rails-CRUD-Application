@@ -33,7 +33,7 @@ class CategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @category.update(category_params)
-        format.html { redirect_to @category, notice: 'Entry updated'}
+        format.html { redirect_to categories_path, notice: 'Entry updated'}
       else
         format.html { render :edit }
       end
@@ -43,7 +43,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category.destroy
     respond_to do |format|
-      format.html { redirect_to categories_url, notice: 'Entry deleted'}
+      format.html { redirect_to categories_path, notice: 'Entry deleted'}
       format.json { head :no_content }
     end
   end

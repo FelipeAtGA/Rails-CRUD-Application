@@ -9,18 +9,23 @@
   </head>
 
   <body>
-  <header>
-    <ul>
-      <li><%= link_to "See all categories" %></li>
-      <li><%= link_to "See all actors" %></li>
+  <header class="center">
+    <h1 class="center">The 2017 Pseudo-Oscar Awards Nomination</h1>
+    <nav>
+      <ul class="noListStyle">
+        <li class="app"><%= link_to "Home", welcome_path %></li>
+        <li class="app"><%= link_to "See all categories", categories_path %></li>
+        <li class="app"><%= link_to "See all actors", actors_path %></li>
+        <li class="app"><%= link_to "Add new category", new_category_path %></li>
     </ul>
+    </nav>
   </header>
   <%= yield %>
-  <footer>
-    <ul>
-      <li>About us</li>
-      <li>Team</li>
-      <li>Terms and conditions</li>
+  <footer class="center">
+    <ul class="noListStyle">
+      <li class="app">About us</li>
+      <li class="app">Team</li>
+      <li class="app">Terms and conditions</li>
     </ul>
   </footer>
   </body>
