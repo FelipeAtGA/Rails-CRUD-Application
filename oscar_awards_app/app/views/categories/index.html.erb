@@ -1,5 +1,7 @@
-<div>
-  <% @categories.each do |category| %>
-  <li><%= category.name %></li>
-  <% end %>
-</div>
+<main>
+  <div>
+    <% @categories.each do |category| %>
+    <li><%= link_to category.name, category_path(category) %></li>
+    <% end %>
+  </div>
+</main>
